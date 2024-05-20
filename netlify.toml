@@ -5,8 +5,8 @@
 # Main site config
 [build]
   base = "/"
-  command = "npm run build && npm run preview"
-  publish = ""
+  command = "npm run build"
+  publish = "npm run preview"
   functions = "functions/"
 
 # Set any security headers here

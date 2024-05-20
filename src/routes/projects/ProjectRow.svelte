@@ -27,7 +27,7 @@
     <!-- Project name, and fork badge if applicable -->
     <h2>
       {formatTitle(repo.name)}
-      {#if repo.isFork}<span class="is-fork-label">Fork</span>{/if}
+      {#if repo.isFork}<span class="is-fork-label">Forked</span>{/if}
     </h2>
   
     <!-- Project description -->
@@ -35,7 +35,7 @@
       {#if repo.description}
         {repo.description}
       {:else}
-        <i>A mysterious project, without a description</i>
+        <i>A project, without a description</i>
       {/if}
     </p>
 

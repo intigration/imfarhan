@@ -47,9 +47,9 @@ const translations: Translations = {
     'blog.search.clear': 'Effacer',
     'blog.results.none': 'Aucun résultat',
     'blog.results.none-1': "Aucun résultat n'a été trouvé.",
-    'blog.results.none-2':
-      'Essayez de sélectionner plus de flux dans le menu déroulant, ou élargissez votre terme de recherche',
-    'blog.error': 'Oh non, quelque chose de vraiment mauvais est arrivé',
+    'blog.results.none-2':`
+      'ڈراپ ڈاؤن مینو سے مزید فیڈز منتخب کرنے کی کوشش کریں ، یا اپنی تلاش کی مدت کو وسعت دیں۔
+      'بلاگ.غلطی': 'اوہ نہیں، کچھ بہت برا ہوا ہے',`
   },
 };
 
@@ -61,10 +61,10 @@ export const supportedLanguages: LanguageMeta[] = [
     text: translations.en,
   },
   {
-    name: 'Français',
-    flag: '🇫🇷',
-    code: 'fr',
-    text: translations.fr,
+    name: 'Urdu',
+    flag: '🇵🇰',
+    code: 'ur',
+    text: translations.ur,
   },
 ];
 

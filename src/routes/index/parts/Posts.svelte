@@ -15,7 +15,7 @@ export let accent = 'var(--accent)';
   <div class="buttons">
     <LinkButton to="/blog" icon="more-arrow">See All</LinkButton>
     <LinkButton
-      to="https://notes.aliciasykes.com"
+      to="https://linkedin.com/"
       icon="website"
       priority="outline"
       textColor="var(--accent)"

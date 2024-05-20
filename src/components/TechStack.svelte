@@ -18,7 +18,7 @@
       There's no one-size fits all, and as such I'm always trying out new technologies, and constantly learning.
     </p>
     <p class="sub-info">
-      The following technologies are the ones I'm most familiar with, and I've linked to code that I've written with each.
+      The following technologies are the ones I'm most familiar and used.
     </p>
     <div class="stack-table">
       {#each techStacks as stackName}

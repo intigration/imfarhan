@@ -33,13 +33,13 @@ const toggleSocialLimit = () => {
   <Heading level="h2" color="var(--accent)">Contact</Heading>
   <div class="buttons">
     <LinkButton to="/contact" icon="more-arrow">Get in Touch</LinkButton>
-    <LinkButton
+    <!-- <LinkButton
       to="{config.contact.pgpKeyLink}"
       icon="pgp"
       priority="outline"
       textColor="var(--accent)"
       target="_blank"
-    >View GPG Key</LinkButton>
+    >View GPG Key</LinkButton> -->
   </div>
   <div class="social-buttons">
     {#each socials.slice(0, numSocialsToDisplay) as social} <SocialLink {...social} isSmall /> {/each}

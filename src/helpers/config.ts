@@ -581,11 +581,11 @@ const config: SiteConfig = {
     backend: [
       {
         language: 'Rust',
-        projects: ['AdGuardian-Term'],
+        projects: [''],
       },
       {
         language: 'Go',
-        projects: ['who-dat', 'go-apod', 'OLD_AdGuardian-Term'],
+        projects: ['', '', ''],
       },
       {
         language: 'Node',
@@ -593,57 +593,57 @@ const config: SiteConfig = {
       },
       {
         language: 'Python',
-        projects: ['portainer-templates', 'gh-trending-no-cors', 'tfl-lift-availability-dash', 'pax'],
+        projects: ['', '', '', ''],
       },
       {
         language: 'Java',
-        projects: ['Minesweper', 'AlternativeVoteSystem', 'TuneSender', 'TreasureHunt'],
+        projects: ['', '', '', ''],
       },
       {
         language: 'PHP',
-        projects: ['revision-quizzes', 'intern-magnet', 'usermonkey'],
+        projects: [''],
       },
     ],
     frontend: [
       {
         language: 'Vue',
-        projects: ['dashy', 'all-the-countries', 'alicia-sykes-website', 'tfl-lift-availability-dash'],
+        projects: [''],
       },
       {
         language: 'Svelte',
-        projects: ['my-website', 'cheat-code'],
+        projects: [''],
       },
       {
         language: 'React',
-        projects: ['web-check'],
+        projects: [''],
       },
       {
         language: 'Solid',
-        projects: ['cso'],
+        projects: [''],
       },
       {
         language: 'Angular',
-        projects: ['happy-app', 'realtime-speech-analytics'],
+        projects: ['', ''],
       },
       {
         language: 'Astro',
-        projects: ['git-into-open-source'],
+        projects: [''],
       },
       {
         language: 'D3',
-        projects: ['twitter-sentiment-visualisation', 'happy-app', 'realtime-speech-analytics'],
+        projects: [''],
       },
       {
         language: 'Alpine',
-        projects: ['who-dat'],
+        projects: [''],
       },
       {
         language: 'CoffeeScript',
-        projects: ['sentiment-analysis'],
+        projects: [''],
       },
       {
         language: 'HTML',
-        projects: ['repo-badge-maker ', 'bullet-convertor', 'md-toc-generator', 'email-extractor', 'cyber-defence-presentation', 'web-dev-school', 'md-cv-maker'],
+        projects: [''],
       },
     ],
     mobile: [

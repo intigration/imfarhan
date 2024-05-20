@@ -11,12 +11,12 @@ export let accent = 'var(--accent)';
   <div class="buttons">
     <LinkButton to="/about" icon="more-arrow">Keep Reading</LinkButton>
     <LinkButton
-      to="https://linkedin.com/in/aliciasykes"
+      to="https://linkedin.com/in/engr-farhan"
       icon="linkedin"
       priority="outline"
       textColor="var(--accent)"
       target="_blank"
-    >View LinkedIn</LinkButton>
+    >Visit LinkedIn Profile</LinkButton>
   </div>
   <br>
   <i>{config.about.intro}</i>

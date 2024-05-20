@@ -44,7 +44,7 @@
     {#if repo.description}
       {repo.description}
     {:else}
-      <i class="no-description">A mysterious project, without a description</i>
+      <i class="no-description">A project, without a description</i>
     {/if}
   </p>
 

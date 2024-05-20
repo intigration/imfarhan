@@ -3,7 +3,7 @@
   import { config } from '$src/store/BlogStore';
   import ThemeSwitcher from '$src/components/ThemeSwitcher.svelte';
   import LanguageSwitcher from '$src/components/LanguageSwitcher.svelte';
-
+  import LinkButton from './LinkButton.svelte';
   export let color: string;
   export const { routeLinks } = config;
 
@@ -13,6 +13,7 @@
 </script>
 
 <nav style={`--accent: ${color};`}>
+  <!-- <LinkButton class="homepage-link" href="/">    <h1>{config.title}</h1></LinkButton> -->
   <a class="homepage-link" href="/">
     <h1>{config.title}</h1>
   </a>

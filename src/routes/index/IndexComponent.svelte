@@ -5,15 +5,17 @@
   import AboutSection from './parts/About.svelte';
   import ContactSection from './parts/Contact.svelte';
   import TechStackSection from './parts/TechStackSection.svelte';
+  import config from '$src/helpers/config';
   
   export let data: any;
   
   </script>
 
 <div class="index-page">
+  <!-- <TitleSection title={config.title} accent="var(--accent-1)"  /> -->
   <PostsSection posts={data.posts}  accent="var(--accent-1)" />
   <ProjectsSection projects={data.repos} accent="var(--accent-2)" />
-  <ContactSection returnedSocials={data.socials}  accent="var(--accent-3)" />
+  <!-- <ContactSection returnedSocials={data.socials}  accent="var(--accent-3)" /> -->
   <AboutSection  accent="var(--accent-4)" />
   <TechStackSection  accent="var(--accent-1)" />
 </div>

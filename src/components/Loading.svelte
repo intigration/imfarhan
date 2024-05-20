@@ -38,7 +38,7 @@
   {#if waitingFor === 'just-now' || onlyShowLoading}
     <h2>{message || "This shouldn't take a sec..."}</h2>
   {:else if waitingFor === 'short-while'}
-    <h2>Almost finished</h2>
+    <h2>Almost...done</h2>
   {:else if waitingFor === 'bloody-ages'}
     <h2 class="warning">Taking longer than expected</h2>
   {:else if waitingFor === 'probably-broken'}
@@ -48,7 +48,7 @@
   {#if waitingFor !== 'probably-broken'}
     <span class="loader" />
   {:else if !hideHomeButton}
-    <LinkButton to="/">Go back Home</LinkButton>
+    <LinkButton to="/">Back to Home</LinkButton>
   {/if}
 </div>
 

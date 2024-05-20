@@ -5,42 +5,48 @@ const config: SiteConfig = {
   description: 'Critical Thinker',
   source: 'https://github.com/intigration/portfolio',
   baseUrl: 'http://localhost:5173',
-  initialFeeds: [{ label: 'Notes', url: 'https://www.genislab.com/feed/' }],
+  initialFeeds: [{ label: 'Notes', url: 'https://www.genislab.com/feed' },    {
+    label: 'BlogSpot',
+    url: 'https://news.google.com/rss/search?q=ai&hl=en-PK&gl=PK&ceid=PK:en',
+  }, {
+    label: 'BlogSpot',
+    url: 'https://feedfry.com/rss/11ef16e88db2c2e8918b7cd4290feb47',
+  }],
   additionalFeeds: [
-    { label: 'Notes', url: 'https://notes.aliciasykes.com/feed/' },
-    {
-      label: 'Dev.to',
-      url: 'https://news.google.com/rss/search?q=AI',
-    },
+    // { label: 'Notes', url: 'https://www.genislab.com/feed' },
+    // {
+    //   label: 'Dev.to',
+    //   url: 'https://genislab.com/feeds/atom',
+    // },
     {
       label: 'BlogSpot',
-      url: 'https://news.google.com/rss/search?q=Machine Learning',
+      url: 'https://news.google.com/rss/search?q=ai&hl=en-PK&gl=PK&ceid=PK:en',
     },
-    {
-      label: 'GitHub',
-      url: 'https://news.google.com/rss/search?q=LLM',
-    },
-    {
-      label: 'StackOverflow',
-      url: 'https://raw.githubusercontent.com/intigration/feeds/main/stackoverflow.atom',
-    },
-    // { label: 'Twitter', url: 'https://raw.githubusercontent.com/intigration/feeds/main/twitter.atom' },
-    {
-      label: 'Reddit',
-      url: 'https://raw.githubusercontent.com/intigration/feeds/main/reddit.atom',
-    },
-    {
-      label: 'Docker',
-      url: 'https://raw.githubusercontent.com/intigration/feeds/main/mastodon.atom',
-    },
-    {
-      label: 'YouTube',
-      url: 'https://raw.githubusercontent.com/intigration/feeds/main/youtube.atom',
-    },
+    // {
+    //   label: 'GitHub',
+    //   url: 'https://news.google.com/rss/search?q=LLM',
+    // },
+    // {
+    //   label: 'StackOverflow',
+    //   url: 'https://raw.githubusercontent.com/intigration/feeds/main/stackoverflow.atom',
+    // },
+    // // { label: 'Twitter', url: 'https://raw.githubusercontent.com/intigration/feeds/main/twitter.atom' },
+    // {
+    //   label: 'Reddit',
+    //   url: 'https://raw.githubusercontent.com/intigration/feeds/main/reddit.atom',
+    // },
+    // {
+    //   label: 'Docker',
+    //   url: 'https://raw.githubusercontent.com/intigration/feeds/main/mastodon.atom',
+    // },
+    // {
+    //   label: 'YouTube',
+    //   url: 'https://raw.githubusercontent.com/intigration/feeds/main/youtube.atom',
+    // },
   ],
 
   routeLinks: [
-    { label: 'Home', route: '/', color: 'var(--accent-1, #ff0099)' },
+    { label: 'Home', route: '/home', color: 'var(--accent-1, #ff0099)' },
     {
       label: 'AI Accelerated Quality',
       route: '/blog',
@@ -48,7 +54,13 @@ const config: SiteConfig = {
       description: 'LinkedIn Newsletter, Skills development tutorials and Technology updates',
     },
     {
-      label: 'Technologies & Tooling',
+      label: 'Technologies',
+      route: '/technologies',
+      color: 'var(--accent-2, #b45eff)',
+      description: 'Technologies and Tooling Chain',
+    },
+    {
+      label: 'Projects',
       route: '/projects',
       color: 'var(--accent-3, #01c0f0)',
       description: 'Projects and Products work',
@@ -497,22 +509,22 @@ const config: SiteConfig = {
   contact: {
     name: 'Muhammad Farhan',
     email: 'engr-farhan@icloud.com',
-    website: 'https://intigration.github.io',
+    website: 'https://eng-farhan.netlify.app',
     socials: {
       Twitter: 'f3rhan1',
       GitHub: 'intigration',
-      'Dev.to': 'Lissy93',
-      Mastodon: '@Lissy93',
-      LinkedIn: 'in/engr-farhan',
-      Instagram: 'liss.sykes',
-      YouTube: 'AliciaSykes',
-      Reddit: 'lissy93',
-      StackOverflow: '979052/alicia',
-      KeyBase: 'AliciaSykes',
-      Facebook: 'Liss.Sykes',
-      PeerList: 'alicia',
-      CodersRank: 'lissy93',
-      'OMG.lol': 'alicia',
+      // 'Dev.to': 'Lissy93',
+      // Mastodon: '@Lissy93',
+      LinkedIn: 'in/engr-farhan'
+      // Instagram: 'liss.sykes',
+      // YouTube: 'AliciaSykes',
+      // Reddit: 'lissy93',
+      // StackOverflow: '979052/alicia',
+      // KeyBase: 'AliciaSykes',
+      // Facebook: 'Liss.Sykes',
+      // PeerList: 'alicia',
+      // CodersRank: 'lissy93',
+      // 'OMG.lol': 'alicia',
     },
     socialButtonLimit: 6,
     mailerConfig: {
@@ -589,7 +601,7 @@ const config: SiteConfig = {
       },
       {
         language: 'Node',
-        projects: ['twitter-sentiment-visualisation', 'quick-example-of-testing-in-nodejs'],
+        projects: [''],
       },
       {
         language: 'Python',
@@ -671,15 +683,15 @@ const config: SiteConfig = {
     other: [
       {
         language: 'Bash',
-        projects: ['minimal-terminal-prompt'],
+        projects: [''],
       },
       {
         language: 'Docker',
-        projects: ['docker-tcpdump', 'dashy'],
+        projects: [''],
       },
       {
         language: 'Config',
-        projects: ['dotfiles', 'espanso-config', 'conky-system-stats-widget', 'Brewfile'],
+        projects: [''],
       },
       {
         language: 'Markdown',

@@ -35,7 +35,7 @@
   on:mouseleave={() => toggleHover(false)}
 >
   <Icon name={icon} height="42px" width="42px" hoverColor={tone} {hover} />
-  <div class="text-part">
+  <!-- <div class="text-part">
     <span class="social-title">{name}</span>
     <span class="social-user">{noAt ? '' : '@'}{formatUn(user)}</span>
     {#if metrics}
@@ -48,7 +48,7 @@
         {/each}
       </span>
     {/if}
-  </div>
+  </div> -->
 </a>
 
 <style lang="scss">

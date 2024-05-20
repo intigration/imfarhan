@@ -183,13 +183,13 @@ export const load = async () => {
     keybase,
   ] = await Promise.all([
     _getTwitterInfo(twitterUn),
-    _getRedditInfo(redditUn),
+    // _getRedditInfo(redditUn),
     _getGithubInfo(githubUn),
-    _getStackOverflowInfo(stackoverflowUn),
-    _getDevToInfo(devtoUn),
-    _getCodersRankInfo(codersRankUn),
-    _getMastodonInfo(mastodonUn),
-    _getKeybaseInfo(keybaseUn),
+    // _getStackOverflowInfo(stackoverflowUn),
+    // _getDevToInfo(devtoUn),
+    // _getCodersRankInfo(codersRankUn),
+    // _getMastodonInfo(mastodonUn),
+    // _getKeybaseInfo(keybaseUn),
   ]);
   return {
     props: {

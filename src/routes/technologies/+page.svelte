@@ -196,7 +196,7 @@
 
 <section>
   <div class="title">
-    <Heading level="h2" size="2.5rem">Project Repositories</Heading>
+    <Heading level="h2" size="2.5rem">technologies & tooling</Heading>
   </div>
 
   <div class="post-filter-options">

@@ -23,6 +23,7 @@ export const prerender = true;
 export const load = async ({ fetch }: PageServerLoad) => {
   return {
     posts: (await loadPosts({ fetch }, config.initialFeeds)).posts,
+    // additionalPosts: (await loadPosts({ fetch }, config.additionalFeeds)).posts,
     repos: (await loadProjects({ fetch })).repos,
     socials: (await loadSocials({ fetch })).props,
   };

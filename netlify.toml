@@ -6,7 +6,6 @@
 [build]
   base = "/"
   command = "npm run build"
-  publish = "npm run preview"
   functions = "functions/"
 
 # Set any security headers here

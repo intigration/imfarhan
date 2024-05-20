@@ -40,7 +40,9 @@ const makeProjectList = async (ghResponse: any): Promise<Project[]> => {
 
 /** @type {import('./$types').PageLoad} */
 export async function load({ fetch }) {
-  const githubApiUrl = `https://api.github.com/users/${config.githubUser}/repos?per_page=100&sort=created&direction=desc`;
+  // const githubApiUrl = `https://api.github.com/users/${config.githubUser}/repos?per_page=100&sort=created&direction=desc`;
+  const githubApiUrl = `https://api.github.com/gists/public`;
+
   const githubRequest = {
     headers: GITHUB_TOKEN ? { Authorization: `Bearer ${GITHUB_TOKEN}` } : {},
   };

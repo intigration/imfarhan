@@ -27,8 +27,12 @@
         <div class="projects">
           {#each job.projects as project}
             <div class="sub-project">
-              <img src={project.logo} alt={project.name} />
-              <p>{project.name} {project.description}</p>
+              <!-- <img src={project.logo} alt={project.name} /> -->
+              <img src='https://th.bing.com/th/id/OIP.qrdi6chTNDfkj5jZDYEb4gHaHW?w=822&h=816&rs=1&pid=ImgDetMain' alt={project.name} />
+
+              <p class="description">{project.name} </p>
+              <!-- <p>{project.name} {project.description}</p> -->
+
             </div>
           {/each}
         </div>

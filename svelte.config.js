@@ -25,6 +25,13 @@ const config = {
   preprocess: vitePreprocess(),
   kit: {
 		//fault options are shown
+    alias: {
+      '$src/*': 'src/*',
+    },
+    prerender: {
+      handleMissingId: 'ignore',
+      crawl: true,
+    },
 		adapter: adapter({
 			// if true, will create a Netlify Edge Function rather
 			// than using standard Node-based functions

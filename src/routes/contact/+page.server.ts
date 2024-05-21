@@ -72,92 +72,92 @@ export const _getGithubInfo = async (username: string) => {
     .catch(() => []);
 };
 
-export const _getStackOverflowInfo = async (username: string) => {
-  const userId = username.replace(/\D/g, '');
-  const stackOverflowEndpoint = `https://api.stackexchange.com/2.2/users/${userId}?site=stackoverflow`;
-  return await fetch(stackOverflowEndpoint)
-    .then((res) => res.json())
-    .then((stats) => {
-      if (stats.items && stats.items[0]) {
-        const { reputation, creation_date } = stats.items[0];
-        const metrics: SocialMetric[] = [
-          { label: 'Rep', value: reputation.toLocaleString() },
-          {
-            label: 'Joined',
-            value: new Date(creation_date * 1000).getFullYear(),
-          },
-        ];
-        return metrics;
-      }
-      return [];
-    })
-    .catch(() => []);
-};
+// export const _getStackOverflowInfo = async (username: string) => {
+//   const userId = username.replace(/\D/g, '');
+//   const stackOverflowEndpoint = `https://api.stackexchange.com/2.2/users/${userId}?site=stackoverflow`;
+//   return await fetch(stackOverflowEndpoint)
+//     .then((res) => res.json())
+//     .then((stats) => {
+//       if (stats.items && stats.items[0]) {
+//         const { reputation, creation_date } = stats.items[0];
+//         const metrics: SocialMetric[] = [
+//           { label: 'Rep', value: reputation.toLocaleString() },
+//           {
+//             label: 'Joined',
+//             value: new Date(creation_date * 1000).getFullYear(),
+//           },
+//         ];
+//         return metrics;
+//       }
+//       return [];
+//     })
+//     .catch(() => []);
+// };
 
-export const _getDevToInfo = async (username: string) => {
-  const devToEndpoint = `https://dev.to/api/users/by_username?url=${username.toLocaleLowerCase()}`;
-  return await fetch(devToEndpoint)
-    .then((res) => res.json())
-    .then((stats) => {
-      const metrics: SocialMetric[] = [
-        { label: 'Joined', value: new Date(stats.joined_at).getFullYear() },
-      ];
-      return metrics;
-    })
-    .catch(() => []);
-};
+// export const _getDevToInfo = async (username: string) => {
+//   const devToEndpoint = `https://dev.to/api/users/by_username?url=${username.toLocaleLowerCase()}`;
+//   return await fetch(devToEndpoint)
+//     .then((res) => res.json())
+//     .then((stats) => {
+//       const metrics: SocialMetric[] = [
+//         { label: 'Joined', value: new Date(stats.joined_at).getFullYear() },
+//       ];
+//       return metrics;
+//     })
+//     .catch(() => []);
+// };
 
-export const _getCodersRankInfo = async (username: string) => {
-  const codersRankEndpoint = `https://api.codersrank.io/v2/users/${username}?get_by=username`;
-  return await fetch(codersRankEndpoint)
-    .then((res) => res.json())
-    .then((stats) => {
-      const metrics: SocialMetric[] = [
-        { label: 'Rank', value: stats.position },
-      ];
-      return metrics;
-    })
-    .catch(() => []);
-};
+// export const _getCodersRankInfo = async (username: string) => {
+//   const codersRankEndpoint = `https://api.codersrank.io/v2/users/${username}?get_by=username`;
+//   return await fetch(codersRankEndpoint)
+//     .then((res) => res.json())
+//     .then((stats) => {
+//       const metrics: SocialMetric[] = [
+//         { label: 'Rank', value: stats.position },
+//       ];
+//       return metrics;
+//     })
+//     .catch(() => []);
+// };
 
-export const _getMastodonInfo = async (username: string) => {
-  const mastodonEndpoint = `https://mastodon.social/api/v1/accounts/001032965`;
-  return await fetch(mastodonEndpoint)
-    .then((res) => res.json())
-    .then((stats) => {
-      if (stats) {
-        const { followers_count, created_at } = stats;
-        const metrics: SocialMetric[] = [
-          { label: 'Followers', value: followers_count.toLocaleString() },
-          { label: 'Joined', value: new Date(created_at).getFullYear() },
-        ];
-        return metrics;
-      }
-      return [];
-    })
-    .catch(() => []);
-};
+// export const _getMastodonInfo = async (username: string) => {
+//   const mastodonEndpoint = `https://mastodon.social/api/v1/accounts/001032965`;
+//   return await fetch(mastodonEndpoint)
+//     .then((res) => res.json())
+//     .then((stats) => {
+//       if (stats) {
+//         const { followers_count, created_at } = stats;
+//         const metrics: SocialMetric[] = [
+//           { label: 'Followers', value: followers_count.toLocaleString() },
+//           { label: 'Joined', value: new Date(created_at).getFullYear() },
+//         ];
+//         return metrics;
+//       }
+//       return [];
+//     })
+//     .catch(() => []);
+// };
 
-export const _getKeybaseInfo = async (username: string) => {
-  const keyBaseEndpoint = `https://keybase.io/_/api/1.0/user/lookup.json?usernames=${username}`;
-  return await fetch(keyBaseEndpoint)
-    .then((res) => res.json())
-    .then((stats) => {
-      if (stats && stats.them && stats.them[0]) {
-        const { basics, devices } = stats.them[0];
-        const metrics: SocialMetric[] = [
-          {
-            label: 'Joined',
-            value: new Date(basics.ctime * 1000).getFullYear(),
-          },
-          { label: 'Devices', value: Object.keys(devices).length },
-        ];
-        return metrics;
-      }
-      return [];
-    })
-    .catch(() => []);
-};
+// export const _getKeybaseInfo = async (username: string) => {
+//   const keyBaseEndpoint = `https://keybase.io/_/api/1.0/user/lookup.json?usernames=${username}`;
+//   return await fetch(keyBaseEndpoint)
+//     .then((res) => res.json())
+//     .then((stats) => {
+//       if (stats && stats.them && stats.them[0]) {
+//         const { basics, devices } = stats.them[0];
+//         const metrics: SocialMetric[] = [
+//           {
+//             label: 'Joined',
+//             value: new Date(basics.ctime * 1000).getFullYear(),
+//           },
+//           { label: 'Devices', value: Object.keys(devices).length },
+//         ];
+//         return metrics;
+//       }
+//       return [];
+//     })
+//     .catch(() => []);
+// };
 
 export const load = async () => {
   const {
@@ -174,13 +174,13 @@ export const load = async () => {
   // Trigger fetch stats for each social
   const [
     twitter,
-    reddit,
+    // reddit,
     github,
-    stackoverflow,
-    devto,
-    codersrank,
-    mastodon,
-    keybase,
+    // stackoverflow,
+    // devto,
+    // codersrank,
+    // mastodon,
+    // keybase,
   ] = await Promise.all([
     _getTwitterInfo(twitterUn),
     // _getRedditInfo(redditUn),
@@ -194,13 +194,13 @@ export const load = async () => {
   return {
     props: {
       twitter,
-      reddit,
+      // reddit,
       github,
-      stackoverflow,
-      devto,
-      codersrank,
-      mastodon,
-      keybase,
+      // stackoverflow,
+      // devto,
+      // codersrank,
+      // mastodon,
+      // keybase,
     },
   };
 };

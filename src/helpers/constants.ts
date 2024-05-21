@@ -16,13 +16,13 @@ export const socialNetworks: SocialNetwork[] = [
     link: 'https://github.com/',
   },
   { name: 'Docker HUB', icon: 'docker', tone: '#f1f155', link: 'https://hub.docker.com/u/' },
-  {
-    name: 'Mastodon',
-    icon: 'mastodon',
-    tone: '#6364FF',
-    link: 'https://mastodon.social/',
-    noAt: true,
-  },
+  // {
+  //   name: 'Mastodon',
+  //   icon: 'mastodon',
+  //   tone: '#6364FF',
+  //   link: 'https://mastodon.social/',
+  //   noAt: true,
+  // },
   {
     name: 'LinkedIn',
     icon: 'linkedin',

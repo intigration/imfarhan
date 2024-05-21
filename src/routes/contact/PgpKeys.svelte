@@ -12,34 +12,34 @@
   };
 
   const keys = [
-    {
-      label: 'PGP',
-      value: 'FEDB 68F5 5C02 83A7',
-      link: 'https://keybase.io/intigration/pgp_keys.asc?fingerprint=0688f8d34587d954e9e51fb8fedb68f55c0283a7',
-    },
+    // {
+    //   label: 'PGP',
+    //   value: 'FEDB 68F5 5C02 83A7',
+    //   link: 'https://keybase.io/intigration/pgp_keys.asc?fingerprint=0688f8d34587d954e9e51fb8fedb68f55c0283a7',
+    // },
     {
       label: 'Email',
       value: 'engr-farhan@icloud.com',
       link: 'mailto:engr-farhan@icloud.com',
     },
-    {
-      label: 'Matrix',
-      value: '@lissy93:matrix.org',
-      link: 'https://matrix.to/#/@lissy93:matrix.org',
-    },
-    {
-      label: 'XMPP',
-      value: 'alicia@xmpp.is',
-      link: 'xmpp:alicia@xmpp.is?join',
-    },
+    // {
+    //   label: 'Matrix',
+    //   value: '@lissy93:matrix.org',
+    //   link: 'https://matrix.to/#/@lissy93:matrix.org',
+    // },
+    // {
+    //   label: 'Siemens',
+    //   value: 'muhammad.farhan@siemens.com',
+    //   link: '?join',
+    // },
     { label: 'Signal', value: 'trusted contacts only', link: '' },
   ];
 </script>
 
 <div class="pgp-container">
-  <Heading level="h2" color="var(--accent)">keys</Heading>
+  <Heading level="h2" color="var(--accent)">Legends never die</Heading>
 
-  {#each keys as key}
+  <!-- {#each keys as key}
     <div class="key-row">
       <span class="key-label">{key.label}</span>
       {#if key.link}
@@ -48,17 +48,17 @@
         <code class="key-no-link">{key.value}</code>
       {/if}
     </div>
-  {/each}
-
+  {/each} -->
+<!-- 
   <button class="toggle-key" on:click={toggleKeyVisibility}
     >{showPubKey ? 'Hide' : 'Show'} Armoured Public Key</button
-  >
+  > -->
 
-  {#if showPubKey}
+  <!-- {#if showPubKey}
     <div class="pgp-key" transition:slide>
       <code>{pgpPublicKey.replaceAll('  ', '')}</code>
     </div>
-  {/if}
+  {/if} -->
 </div>
 
 <style lang="scss">

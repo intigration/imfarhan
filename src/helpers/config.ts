@@ -53,12 +53,12 @@ const config: SiteConfig = {
       color: 'var(--accent-2, #b45eff)',
       description: 'LinkedIn Newsletter, Skills development tutorials and Technology updates',
     },
-    {
-      label: 'Technologies',
-      route: '/technologies',
-      color: 'var(--accent-2, #b45eff)',
-      description: 'Technologies and Tooling Chain',
-    },
+    // {
+    //   label: 'Technologies',
+    //   route: '/technologies',
+    //   color: 'var(--accent-2, #b45eff)',
+    //   description: 'Technologies and Tooling Chain',
+    // },
     {
       label: 'Projects',
       route: '/projects',

@@ -26,27 +26,27 @@ const translations: Translations = {
       'Try selecting more feeds in the dropdown, or broadening your search term',
     'blog.error': 'Oh no, something real bad happened',
   },
-  fr: {
+  ur: {
     // Page titles
-    'pages.home': 'Accueil',
-    'pages.blog': 'Blog',
-    'pages.about': 'À propos',
-    'pages.contact': 'Contact',
-    'pages.projects': 'Projets',
+    'pages.home': 'بازیچۂ اطفال ہے دنیا مرے آگے',
+    'pages.blog': 'بلاگ',
+    'pages.about': 'شاعر',
+    'pages.contact': 'ڈرامہ',
+    'pages.projects': 'میلہ گھومنی',
 
     // Blog page text
     'blog.sources-menu': 'Sources',
     'blog.sources-all': 'Tout sélectionner',
     'blog.sources-none': 'Tout déselectionner',
-    'blog.read-more': 'Lire la suite',
+    'blog.read-more': ' مزید فیڈز',
     'blog.time-days-ago': 'jours passés',
     'blog.time-years-ago': 'ans passés',
     'blog.post-hover.read': 'Lire',
     'blog.post-hover.from': 'De',
     'blog.search.showing': 'Affichage de {{count}} résultats pour "{{query}}"',
     'blog.search.clear': 'Effacer',
-    'blog.results.none': 'Aucun résultat',
-    'blog.results.none-1': "Aucun résultat n'a été trouvé.",
+    'blog.results.none': 'اپنی تلاش کی مدت کو وسعت دیں',
+    'blog.results.none-1': "اپنی تلاش کی مدت کو وسعت دیں.",
     'blog.results.none-2':`
       'ڈراپ ڈاؤن مینو سے مزید فیڈز منتخب کرنے کی کوشش کریں ، یا اپنی تلاش کی مدت کو وسعت دیں۔
       'بلاگ.غلطی': 'اوہ نہیں، کچھ بہت برا ہوا ہے',`
@@ -56,13 +56,13 @@ const translations: Translations = {
 export const supportedLanguages: LanguageMeta[] = [
   {
     name: 'English',
-    flag: '🇵🇰',
+    flag: '🏴󠁧󠁢󠁥󠁮󠁧󠁿',
     code: 'en',
     text: translations.en,
   },
   {
     name: 'Urdu',
-    flag: '🇵🇰',
+    flag: '🏳️',
     code: 'ur',
     text: translations.ur,
   },

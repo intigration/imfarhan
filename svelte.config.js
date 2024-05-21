@@ -1,6 +1,6 @@
 import autoAdapter from '@sveltejs/adapter-auto';
 import staticAdapter from '@sveltejs/adapter-static';
-import netlifyAdapter from '@sveltejs/adapter-netlify';
+import adapter from '@sveltejs/adapter-netlify';
 import vercelAdapter from '@sveltejs/adapter-vercel';
 import nodeAdapter from '@sveltejs/adapter-node';
 
@@ -9,7 +9,7 @@ import { vitePreprocess } from '@sveltejs/kit/vite';
 let selectedAdapter;
 
 if (process.env.DEPLOY_TARGET === 'NETLIFY') {
-  selectedAdapter = netlifyAdapter();
+  selectedAdapter = adapter();
 } else if (process.env.DEPLOY_TARGET === 'VERCEL') {
   selectedAdapter = vercelAdapter();
 } else if (process.env.DEPLOY_TARGET === 'NODE') {
@@ -24,15 +24,17 @@ if (process.env.DEPLOY_TARGET === 'NETLIFY') {
 const config = {
   preprocess: vitePreprocess(),
   kit: {
-    adapter: selectedAdapter,
-    alias: {
-      '$src/*': 'src/*',
-    },
-    prerender: {
-      handleMissingId: 'ignore',
-      crawl: true,
-    }
-  }
+		//fault options are shown
+		adapter: adapter({
+			// if true, will create a Netlify Edge Function rather
+			// than using standard Node-based functions
+			edge: false,
+
+			// if true, will split your app into multiple functions
+			// instead of creating a single one for the entire app.
+			// if `edge` is true, this option cannot be used
+			split: false
+		})
+	}
 };
 
-export default config;

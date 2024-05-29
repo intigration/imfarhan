@@ -29,8 +29,8 @@ const translations: Translations = {
   ur: {
     // Page titles
     'pages.home': 'بازیچۂ اطفال ہے دنیا مرے آگے',
-    'pages.blog': 'بلاگ',
-    'pages.about': 'شاعر',
+    'pages.blog': 'تیرے بارے میں جوب سوچا نہیں تھا ... میں تنہا تھا اگر اتنا نہیں تھا',
+    'pages.about': 'زندگی اور کچھ بھی نہیں تیری میری کہانی ہے',
     'pages.contact': 'ڈرامہ',
     'pages.projects': 'میلہ گھومنی',
 

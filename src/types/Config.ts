@@ -14,6 +14,10 @@ export interface SiteConfig {
   description: string; // Website description
   source: string; // Link to project source (e.g. on GitHub)
   baseUrl: string; // The URL where the site is hosted
+  workspace: {
+    intro: string;
+    bio: string[];
+  };
   loadIndex?: boolean; // Weather to skip to /index instead of /home
   initialFeeds: RssUrlList; // List of RSS feeds to fetch + show on load
   additionalFeeds: RssUrlList; // List of all available feeds to add to filter dropdown

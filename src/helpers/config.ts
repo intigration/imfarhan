@@ -72,6 +72,12 @@ const config: SiteConfig = {
       description: 'Social profile links, and meeting appointment',
     },
     {
+      label: 'workspace',
+      route: '/workspace',
+      color: 'var(--accent-2, #b45eff)',
+      description: 'my workspace',
+    },
+    {
       label: 'Profile',
       route: '/about',
       color: 'var(--accent-4, #1de691)',
@@ -86,6 +92,7 @@ const config: SiteConfig = {
     copyright: true,
   },
   githubUser: 'intigration',
+  docker:'intigration',
   defaultTheme: 'callisto',
   defaultLanguage: 'en',
   colorSchemes: {
@@ -513,7 +520,7 @@ const config: SiteConfig = {
     socials: {
       Twitter: 'f3rhan1',
       GitHub: 'intigration',
-      // 'Dev.to': 'Lissy93',
+      Docker: 'intigration',
       // Mastodon: '@Lissy93',
       LinkedIn: 'in/engr-farhan'
       // Instagram: 'liss.sykes',
@@ -572,6 +579,22 @@ const config: SiteConfig = {
       =dpLK
       -----END PGP PUBLIC KEY BLOCK-----
 `,
+  },
+  workspace: {
+    intro: 'Scaling AI by taking human in loop...',
+    bio: [
+      "I'm Farhan, a seasoned software engineering consultant and certified <a href'https://istqb.org/'>ISTQB</a> tester having working knowledge of all phases of SDLC stage.",
+
+      `I have strong work credentials and successful track
+      record to develop commerical products. `, `I combine vision with operational, domain & technical expertise to bring next-generation
+      technologies to market in record time. 
+      <br /  
+       `,
+
+      `      In spare time, I would like to go on long drive with family or friends.
+      `,
+    ],
+    picture: 'https://avatars.githubusercontent.com/u/25178774?v=4',
   },
   about: {
     intro: 'Scaling AI by taking human in loop...',

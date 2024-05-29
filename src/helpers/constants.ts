@@ -15,7 +15,7 @@ export const socialNetworks: SocialNetwork[] = [
     tone: '#585858',
     link: 'https://github.com/',
   },
-  { name: 'Docker HUB', icon: 'docker', tone: '#f1f155', link: 'https://hub.docker.com/u/' },
+  { name: 'Docker', icon: 'docker', tone: '#f1f155', link: 'https://hub.docker.com/u/' },
   // {
   //   name: 'Mastodon',
   //   icon: 'mastodon',

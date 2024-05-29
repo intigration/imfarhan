@@ -8,12 +8,18 @@ importers:
 
   .:
     dependencies:
+      '@stackblitz/sdk':
+        specifier: ^1.10.0
+        version: 1.10.0
       d3:
         specifier: ^7.8.5
         version: 7.9.0
       d3-delaunay:
         specifier: ^6.0.4
         version: 6.0.4
+      magic-string:
+        specifier: ^0.30.10
+        version: 0.30.10
     devDependencies:
       '@playwright/test':
         specifier: ^1.28.1
@@ -589,6 +595,9 @@ packages:
     peerDependenciesMeta:
       rollup:
         optional: true
+
+  '@stackblitz/sdk@1.10.0':
+    resolution: {integrity: sha512-IcvE9Xifo2c4/f+yNqjFM/OW5VTBPLed3TxsQ+n8n81Py358IqD5w0IYfFgV5gbDjp2g5H5YK2/Shls/kQNTWQ==}
 
   '@sveltejs/adapter-auto@1.0.3':
     resolution: {integrity: sha512-hc7O12YQqvZ1CD4fo1gMJuPzBZvuoG5kwxb2RRoz4fVoB8B2vuPO2cY751Ln0G6T/HMrAf8kCqw6Pg+wbxcstw==}
@@ -2242,6 +2251,8 @@ snapshots:
       picomatch: 2.3.1
     optionalDependencies:
       rollup: 3.29.4
+
+  '@stackblitz/sdk@1.10.0': {}
 
   '@sveltejs/adapter-auto@1.0.3(@sveltejs/kit@1.30.4(svelte@3.59.2)(vite@4.5.3(@types/node@20.12.12)(sass@1.77.2)))':
     dependencies:

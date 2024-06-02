@@ -724,7 +724,7 @@ const config: SiteConfig = {
   },
   techStackExtras: {
     devOps: [
-      'Ansible', 'Kubernetes', 'Prometheus', 'GitHubActions', 'Grafana'
+      'Ansible', 'Kubernetes', 'Prometheus', 'GitHubActions', 'Grafana','Gitlab','Jenkin'
     ],
     emulation: [
       'qemu', 'virtualbox'
@@ -739,7 +739,7 @@ const config: SiteConfig = {
       'Jest', 'Puppeteer', 'Enzyme', 'Cypress', 'ReadyAPI', 'Postman',
     ],
     security: [
-      'Nmap', 'OWASPZAP', 'BurpSuite', 'Wireshark',
+      'Nmap', 'OWASPZAP', 'BurpSuite', 'Wireshark',' BlackDuck','PenTesting'
     ],
   },
   // plausible: {

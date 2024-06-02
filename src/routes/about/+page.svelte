@@ -1,155 +1,87 @@
-<script lang="ts">
-  import Heading from '$src/components/Heading.svelte';
-  import TechStack from '$src/components/TechStack.svelte';
-  import WorkExperience from '$src/components/WorkExperience.svelte';
-  import { t } from '$src/store/Language';
+<script>
 
-  import config from '$src/helpers/config';
-
-  const { intro, bio, picture } = config.about;
-
-  const morePages = config.routeLinks.filter(
-    (link) => !['/about', '/'].includes(link.route)
-  );
+	const layers = [0, 1, 2, 3, 4, 5, 6, 7, 8];
+let hereKitty=false
+	let y;
 </script>
 
-<!-- Page title -->
-<div class="heading">
-  <Heading level="h2" size="2.5rem">{$t('pages.about')}</Heading>
+<svelte:window bind:scrollY={y} />
+
+<a class="parallax-container" href="https://www.firewatchgame.com">
+	{#each layers as layer}
+		<img
+			style="transform: translate(0,{(-y * layer) / (layers.length - 1)}px)"
+			src="https://www.firewatchgame.com/images/parallax/parallax{layer}.png"
+			alt="parallax layer {layer}"
+		/>
+	{/each}
+</a>
+
+<div class="text">
+	<span style="opacity: {1 - Math.max(0, y / 40)}"> scroll down </span>
+
+	<div class="foreground">
+		You have scrolled {y} pixels
+	</div>
 </div>
 
-<!-- Bio paragraphs -->
-<div class="content">
-  <section class="intro">
-    <i>{intro}</i>
-    {#each bio as bioLine}
-      <p class="bio-line">{@html bioLine}</p>
-    {/each}
-  </section>
+<style>
+	.parallax-container {
+		position: fixed;
+		width: 2400px;
+		height: 712px;
+		left: 50%;
+		transform: translate(-50%, 0);
+	}
 
-  <!-- Profile picture (and links to other pages) -->
-  <section class="ugly-picture">
-    <img src={picture} alt="Users profile" />
-    <div class="pages">
-      {#each morePages as page}
-        <a href={page.route} style={`--page-color: ${page.color};`}>{page.label}</a>
-      {/each}
-    </div>
-  </section>
+	.parallax-container img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		will-change: transform;
+	}
 
-  <!-- Work Experience -->
-  <section class="experience">
-    <WorkExperience />
-  </section>
+	.parallax-container img:last-child::after {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background: rgb(45, 10, 13);
+	}
 
-  <!-- Technology Stack -->
-  <section class="stack">
-    <TechStack/>
-  </section>
+	.text {
+		position: relative;
+		width: 100%;
+		height: 300vh;
+		color: rgb(220, 113, 43);
+		text-align: center;
+		padding: 4em 0.5em 0.5em 0.5em;
+		box-sizing: border-box;
+		pointer-events: none;
+	}
 
-  <!-- Social links -->
-  <section class="soclials"></section>
-</div>
+	span {
+		display: block;
+		font-size: 1em;
+		text-transform: uppercase;
+		will-change: transform, opacity;
+	}
 
-<style lang="scss">
-  @import '$src/styles/media-queries.scss';
+	.foreground {
+		position: absolute;
+		top: 711px;
+		left: 0;
+		width: 100%;
+		height: calc(100% - 712px);
+		background-color: rgb(32, 0, 1);
+		color: white;
+		padding: 50vh 0 0 0;
+	}
 
-  .heading {
-    margin: 1rem calc(5vw + 1rem) 0;
-    max-width: 1200px;
-    width: 100%;
-    margin: 0 auto;
-  }
-
-  .content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
-    max-width: 1200px;
-    @include laptop-up {
-      // There's probably a better way to scale this grid, bit idk how
-      grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
-    }
-    grid-column-gap: 1rem;
-    grid-row-gap: 1rem;
-    padding: 1rem;
-    width: 95vw;
-    margin: 0 auto;
-  }
-
-  section {
-    padding: 1rem;
-    border-radius: var(--curve-factor);
-    background: var(--card-background);
-    // Intro / bio Section
-    &.intro {
-      grid-column-start: span 2;
-      i {
-        opacity: 0.8;
-      }
-      :global(p) {
-        margin: 1rem 0;
-        font-size: 1.25rem;
-        line-height: 1.8rem;
-        font-family: RedHatText;
-      }
-      :global(a) {
-        color: var(--accent);
-        text-decoration: none;
-        &:hover {
-          text-decoration: underline;
-        }
-      }
-    }
-    // Profile pic + link list section
-    &.ugly-picture {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      img {
-        width: 100%;
-        max-width: 300px;
-        margin: 0 auto;
-        border-radius: var(--curve-factor);
-      }
-      .pages {
-        opacity: 0.9;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        &:hover {
-          opacity: 1;
-        }
-        a {
-          color: var(--page-color, var(--accent));
-          border-radius: var(--curve-factor);
-          padding: 0.25rem 0.5rem;
-          margin: 0.5rem;
-          font-weight: bold;
-          text-decoration: none;
-          transition: all ease-in-out 0.2s;
-          min-width: 5rem;
-          text-align: center;
-          border: 1px solid var(--page-color, var(--accent));
-          &:hover {
-            color: var(--background);
-            background: var(--page-color, var(--accent));
-          }
-        }
-      }
-    }
-    // Work experience section
-    &.experience {
-      grid-column-start: span 2;
-    }
-    // Tech stack section
-    &.stack {
-      grid-row-start: span 3;
-    }
-
-    // Social links section
-    &.soclials {
-      grid-column-start: span 2;
-    }
-  }
-
+	:global(body) {
+		margin: 0;
+		padding: 0;
+		background-color: rgb(253, 174, 51);
+	}
 </style>

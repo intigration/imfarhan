@@ -106,6 +106,9 @@
     // Testing
     jest: { name: 'Jest', color: 'C21325', icon: 'jest' },
     puppeteer: { name: 'Puppeteer', color: '40B5A4', icon: 'puppeteer' },
+    selenium: { name: 'Selenium', color: '40B5A4', icon: 'selenium' },
+    playwright: { name: 'PLaywright', color: '40B5A4', icon: 'playwright' },
+
     enzyme: { name: 'Testing Library', color: 'E33332', icon: 'testinglibrary' },
     cypress: { name: 'Cypress', color: '17202C', icon: 'cypress' },
     storybook: { name: 'Storybook', color: 'FF4785', icon: 'storybook' },

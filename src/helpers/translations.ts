@@ -8,6 +8,7 @@ const translations: Translations = {
     'pages.about': 'About',
     'pages.contact': 'Contact',
     'pages.projects': 'Projects',
+    'pages.workspace': 'Workspace',
 
     // Blog page text
     'blog.sources-menu': 'Sources',

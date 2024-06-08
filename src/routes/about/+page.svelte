@@ -7,21 +7,22 @@ let hereKitty=false
 
 <svelte:window bind:scrollY={y} />
 
-<a class="parallax-container" href="https://www.firewatchgame.com">
+<a class="parallax-container" href="https://www.github.com/intigration">
 	{#each layers as layer}
 		<img
 			style="transform: translate(0,{(-y * layer) / (layers.length - 1)}px)"
-			src="https://www.firewatchgame.com/images/parallax/parallax{layer}.png"
+			src="https://engr-farhan.netlify.app/parrallax.jpg"
 			alt="parallax layer {layer}"
 		/>
 	{/each}
 </a>
 
 <div class="text">
-	<span style="opacity: {1 - Math.max(0, y / 40)}"> scroll down </span>
+	<span style="opacity: {1 - Math.max(0, y / 40)}"> I am passionate about staying current with industry trends and advancements and producing quality deliverables</span>
 
 	<div class="foreground">
-		You have scrolled {y} pixels
+		 I actively seek opportunities to expand my knowledge and skill set. My commitment to excellence, problem-solving capabilities, and dedication to delivering value make me a valuable asset in any development team.
+
 	</div>
 </div>
 

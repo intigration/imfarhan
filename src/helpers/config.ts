@@ -599,12 +599,21 @@ const config: SiteConfig = {
   about: {
     intro: 'Scaling AI by taking human in loop...',
     bio: [
-      "I'm Farhan, a seasoned software engineering consultant and certified <a href'https://istqb.org/'>ISTQB</a> tester having working knowledge of all phases of SDLC stage.",
+      "I'm Farhan, an experienced software developer and certified <a href'https://istqb.org/'>ISTQB</a> tester having working knowledge of all phases of SDLC stage.",
 
-      `I have strong work credentials and successful track
-      record to develop commerical products. `, `I combine vision with operational, domain & technical expertise to bring next-generation
-      technologies to market in record time. 
-      <br /  
+      `▶ As a seasoned Full Stack Development Engineer with over 10 years of practical development experience, with strong analytical skills and expertise in broad range of technologies.
+<br /><br />▶ Demonstrated ability to create innovative AI solutions for diverse applications such as natural language processing, computer vision, and autonomous systems.
+<br /><br />▶ Having hands on product development experience in IoT domain, specifically covered back-end development using Java, Python and related open source technologies.<br /><br />▶  Experience in Agile software development using SCRUM.
+<br /><br />▶ Expertise in Python, JavaScript, TypeScript, ReactJS, VueJS, Selenium, Postman, Playwright, Electron, Angular, Spring, ReadyAPI, Hibernate, MongoDB, MySQL and Cassandra.
+<br /><br />▶ Proficient in design and development of software applications especially in software as a service (SaaS) layer and micro-services.
+<br /><br />▶ Exposed to designing system level database, restful services.
+<br /><br />▶ Having hands on experience in build automation using Jenkins, Gitlab CI, Circle CI
+<br /><br />Throughout my career, I have successfully led and contributed to numerous projects, from inception through deployment, consistently ensuring optimal performance, security, and user experience. My proficiency in agile methodologies and collaborative environments enables me to work effectively within diverse teams, driving innovation and continuous improvement.
+<br />
+<br />
+"Self-reflection is key to purposeful testing."
+<br />
+      <br />  
        `,
 
       `      In spare time, I would like to go on long drive with family or friends.
@@ -724,7 +733,7 @@ const config: SiteConfig = {
   },
   techStackExtras: {
     devOps: [
-      'Ansible', 'Kubernetes', 'Prometheus', 'GitHubActions', 'Grafana','Gitlab','Jenkin'
+      'Ansible', 'Kubernetes', 'Prometheus', 'GitHubActions', 'Grafana'
     ],
     emulation: [
       'qemu', 'virtualbox'
@@ -739,7 +748,7 @@ const config: SiteConfig = {
       'Jest', 'Puppeteer', 'Enzyme', 'Cypress', 'ReadyAPI', 'Postman',
     ],
     security: [
-      'Nmap', 'OWASPZAP', 'BurpSuite', 'Wireshark',' BlackDuck','PenTesting'
+      'Nmap', 'OWASPZAP', 'BurpSuite', 'Wireshark',
     ],
   },
   // plausible: {

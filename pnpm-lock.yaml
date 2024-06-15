@@ -48,6 +48,9 @@ importers:
       '@typescript-eslint/parser':
         specifier: ^5.45.0
         version: 5.62.0(eslint@8.57.0)(typescript@4.9.5)
+      d3-scale:
+        specifier: ^4.0.2
+        version: 4.0.2
       eslint:
         specifier: ^8.28.0
         version: 8.57.0

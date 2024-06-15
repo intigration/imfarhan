@@ -2,9 +2,9 @@
   import Icon from '$src/components/Icon.svelte';
 
   export let to = '';
-  export let target = '_self';
+  export let target = '';
   export let priority = 'primary';
-  export let textColor = '';
+  export let textColor = 'brown';
   export let icon: string | null = null;
 </script>
 

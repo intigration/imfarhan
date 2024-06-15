@@ -175,10 +175,12 @@ const config: SiteConfig = {
       projects: [
         {
           name: "Value Stream Management",
+          logo: '',
           description: "<div>VSM is all about to reflect business value in the deliverable. Value Stream Management (VSM) is a powerful approach to improving application delivery by optimizing the entire software development and delivery process. It focuses on streamlining and visualizing the flow of work from ideation to production, with the ultimate goal of delivering value to customers faster and more efficiently. Here are some ways VSM can help overcome challenges in application delivery:&nbsp; ⬛End-to-End Visibility:&nbsp; ⬛Reducing Waste:&nbsp; ⬛Improved Collaboration:&nbsp; ⬛Prioritization:&nbsp; ⬛Data-Driven Decision Making: ⬛Continuous Improvement:&nbsp; ⬛Risk Reduction:&nbsp; ⬛Enhanced Predictability:&nbsp; ⬛Alignment with Business Goals:&nbsp; ⬛Cultural Shift:&nbsp;&nbsp; To effectively implement VSM, organizations need the right tools, methodologies, and a commitment to continuous improvement. It&%2339;s not a one-time fix but an ongoing journey toward delivering software more efficiently and effectively. By embracing the principles of Value Stream Management, organizations can overcome challenges in application delivery and drive greater value for their customers.</div>"
         },
         {
           name: "LLM application, powered with RAG",
+          logo: '',
           description: "QA supervisor, a specialist agent for quality assurance opeartions"
         }
       ]
@@ -655,7 +657,7 @@ const config: SiteConfig = {
       },
       {
         language: 'Svelte',
-        projects: [''],
+        projects: ['genisgpt'],
       },
       {
         language: 'React',

@@ -15,7 +15,14 @@
   const homePageLinks = routeLinks.filter((rl) => rl.route !== '/');
 
   let showLoader = false;
+  import { time, elapsed } from '$src/store/stores.js';
 
+	const formatter = new Intl.DateTimeFormat('en', {
+		hour12: true,
+		hour: 'numeric',
+		minute: '2-digit',
+		second: '2-digit'
+	});
   onMount(() => {
     try { new D3Voronoi(); }
     catch (e) { console.warn('D3Voronoi failed to load', e); }
@@ -51,6 +58,14 @@
       size="4rem"
       color="var(--home-accent-background)">Muhammad Farhan</Heading
     >
+
+<h1>The current time is {formatter.format($time)}</h1>
+
+<p>
+	You are being at here for last
+	{$elapsed}
+	{$elapsed === 1 ? 'second' : 'seconds'}
+</p>
     <div class="socials">
       {#each socialLinks as social}
         {#if social}
